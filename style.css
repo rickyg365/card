@@ -46,9 +46,11 @@ a {
 
     /* border: 2px solid white; */
 
-    transform: rotateX(5deg) rotateY(-15deg);
     background-color: white;
+    box-shadow: -1px 2px 5px 2px #2d2d2d40;
+
     transition: all 300ms;
+    /* transform: rotateX(5deg) rotateY(-15deg); */
     transform-style: preserve-3d;
 }
 
@@ -64,26 +66,53 @@ a {
 
 .card-content {
     cursor: pointer;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    z-index: 20px;
-
     transform: translateZ(6rem);
 }
 
+.card-text {
+    color: #2d2d2d;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .card-content:hover {
-    transform: translateZ(7rem);
+    transform: translateZ(7.5rem);
+}
+.card-content:hover .card-text {
+    color: lightcoral;
+}
+.card-content:hover .name {
+    color: lightcoral;
+}
+.card-content:hover .email {
+    color: #c9510c;
+}
+.card-content:hover .github {
+    color: #6e5494;
+}
+.card-content:hover .linkedin {
+    color: #0072b1;
 }
 
 .card-wrapper:hover .card {
     /* text-shadow: 1px 1px 0px rgb(189, 189, 189); */
-    box-shadow: -1px 2px 5px 2px #2d2d2d40;
-    transform: rotateX(0deg) rotateY(0deg);
+    /* box-shadow: -1px 2px 5px 2px #2d2d2d40; */
+    transform: rotateX(4deg) rotateY(-10deg);
 }
 
 .name {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 800;
+}
+
+@media screen and (max-width: 750px) {
+    .card-wrapper {
+        width: 100%;
+        height: 100%;
+        transform: rotate(90deg);
+    }
+
+    /* .card-wrapper:hover .card {
+        transform: unset;
+    } */
 }
